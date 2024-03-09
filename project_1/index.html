@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <main>
+      <div id="header">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+          Thank you for your time filling up this survey form.
+        </p>
+      </div>
+
+      <form action="#" method="post" id="survey-form">
+        <div class="container">
+          <label id="name-label" for="name"
+            >Name
+            <input
+              class="form-full"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your Name"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="container">
+          <label id="email-label" for="email"
+            >Email
+            <input
+              class="form-full"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your Email"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="container">
+          <label id="age-label" for="number"
+            >Age (optional)
+            <input
+              class="form-full"
+              type="number"
+              name="number"
+              id="number"
+              min="13"
+              max="120"
+              placeholder="Age"
+            />
+          </label>
+        </div>
+
+        <div class="container">
+          <p>Choose your occupation</p>
+          <select name="dropdown" id="dropdown" class="form-full" required>
+            <option disabled selected value>Select current occupation</option>
+            <option value="highschool">Highschool</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="graduate">Graduate</option>
+          </select>
+        </div>
+
+        <div class="container" id="dog-cat">
+          <p>Are you a dog or cat person ?</p>
+          <label for="dog-cat">
+            <input
+              type="radio"
+              name="dog-cat"
+              id="dog"
+              value="dog"
+              checked
+            />Dog Person
+          </label>
+          <label for="dog-cat">
+            <input type="radio" name="dog-cat" id="cat" value="cat" />Cat Person
+          </label>
+        </div>
+
+        <div class="container" id="programming-lang">
+          <legend>What is your programming language ?</legend>
+          <label for="python">
+            <input type="checkbox" name="python" id="python" value="python" />
+            Python
+          </label>
+          <label for="cpp">
+            <input type="checkbox" name="cpp" id="cpp" value="cpp" />
+            C++
+          </label>
+        </div>
+        <div class="container">
+          <label for="comment"> Any suggestion ? </label>
+          <textarea
+            name="comment"
+            id="comment"
+            cols="50"
+            rows="10"
+            value="comment"
+          ></textarea>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
